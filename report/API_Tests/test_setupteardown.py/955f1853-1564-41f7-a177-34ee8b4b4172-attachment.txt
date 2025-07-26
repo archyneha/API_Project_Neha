@@ -1,0 +1,20 @@
+{'email': 'autoamteUser@auto373', 'password': '1234'}
+
+ReqURL:http://127.0.0.1:5000/api/register
+reg_response= <Response [201]>
+
+ReqURL:http://127.0.0.1:5000/api/login
+***** After Yield *****
+
+ReqURL:http://127.0.0.1:5000/api/login
+response==== {
+  "email": "autoamteUser@auto373",
+  "id": "2"
+}
+
+headers=== {'Content-type': 'application/json', 'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJleHAiOjE3NTM1MzUyOTl9.R-4PWCZw7EAs73CJZBdiD8s7femV6TnwIMWu27cBjDU'}
+del_resp== {
+  "email": "autoamteUser@auto373",
+  "id": "2"
+}
+
