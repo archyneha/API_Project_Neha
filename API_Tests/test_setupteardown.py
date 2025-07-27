@@ -1,7 +1,7 @@
 import pytest
 import random
 import allure
-
+import time
 from Utils.myconfigparser import getFlaskAppBaseURL,getJsonFromFile
 from Utils.apiutils import postApiData,delAPiData
 baseURL=getFlaskAppBaseURL()
@@ -25,6 +25,7 @@ def reg_user():
     data=reg_response.json()
     yield data # anything after this statement will run as tear down or after the test function is executed
     print("***** After Yield *****")
+    time.sleep(30)
     delUrl=baseURL+delUrlPath
     loginUrl=baseURL+loginURLPath
     login_resp=postApiData(loginUrl,payload)
